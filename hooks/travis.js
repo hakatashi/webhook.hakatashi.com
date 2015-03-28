@@ -53,7 +53,14 @@ router.post('/', function (req, res, next) {
     var text = '[Travis-CI:' + payload.repository.name + ' #' + payload.number + ']'
         + ' The build was ' + payload.status_message + '.'
         + (payload.status ? ' @hakatashi' : '')
-        + ' ' + payload.build_url;
+        + ' Detail: ' + payload.build_url;
+
+    console.log(JSON.stringify({
+        headers: req.headers,
+        ip: req.ip,
+        query: req.query,
+        body: req.body,
+    }));
 
     twitter.post('hakatastatus', 'statuses/update', {
         status: text,
