@@ -1,0 +1,23 @@
+{
+  "name": "webhook.hakatashi.com",
+  "version": "0.0.0",
+  "description": "Tiny Router for My Personal Webhooks",
+  "private": true,
+  "author": "Koki Takahashi <hakatasiloving@gmail.com> (http://hakatashi.com/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hakatashi/webhook.hakatashi.com.git"
+  },
+  "keywords": [
+    "Webhook"
+  ],
+  "bugs": {
+    "url": "https://github.com/hakatashi/webhook.hakatashi.com/issues"
+  },
+  "homepage": "https://github.com/hakatashi/webhook.hakatashi.com",
+  "devDependencies": {
+    "express": "^4.12.3",
+    "request": "^2.54.0"
+  }
+}
