@@ -10,6 +10,10 @@ handler.on('error', (error) => {
 	console.error(error);
 });
 
+handler.on('ping', (event) => {
+	console.log(event);
+});
+
 handler.on('push', (event) => {
 	console.log(event);
 });
