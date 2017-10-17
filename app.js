@@ -29,7 +29,7 @@ app.use((req, res, next) => {
 
 app.use('/', hooks.index);
 app.use('/travis', hooks.travis);
-app.use('/slackbot', hooks.slackbot);
+app.use('/tsg-slackbot', hooks.slackbot);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
