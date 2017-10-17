@@ -19,6 +19,11 @@ app.set('views', `${__dirname}/views`);
 // uncomment after placing your favicon in /public
 // app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('combined'));
+
+// github webhook parser should be before body-parser
+// https://github.com/rvagg/github-webhook-handler/issues/14#issuecomment-183141719
+app.use('/tsg-slackbot', hooks.slackbot);
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
@@ -29,7 +34,6 @@ app.use((req, res, next) => {
 
 app.use('/', hooks.index);
 app.use('/travis', hooks.travis);
-app.use('/tsg-slackbot', hooks.slackbot);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
