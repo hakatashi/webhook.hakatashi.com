@@ -22,5 +22,10 @@
     "express": "^4.12.3",
     "morgan": "^1.5.2",
     "request": "^2.54.0"
+  },
+  "devDependencies": {
+    "@hakatashi/eslint-config": "^1.1.1",
+    "eslint": "^4.9.0",
+    "eslint-plugin-react": "^7.4.0"
   }
 }
