@@ -9,6 +9,7 @@ const config = require('./config').server;
 const hooks = {
 	index: require('./hooks/index'),
 	travis: require('./hooks/travis'),
+	slackbot: require('./hooks/slackbot'),
 };
 
 const app = express();
@@ -28,6 +29,7 @@ app.use((req, res, next) => {
 
 app.use('/', hooks.index);
 app.use('/travis', hooks.travis);
+app.use('/slackbot', hooks.slackbot);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
